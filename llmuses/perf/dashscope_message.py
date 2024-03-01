@@ -19,6 +19,7 @@ def get_query(model: str, prompt: str, **kwargs) -> Dict:
         "model": model,
         "input": {"messages": messages},
         "parameters": {"stream": True,
+                       "incremental_output": True,
                        **kwargs}
     }
     
